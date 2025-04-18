@@ -51,9 +51,9 @@ const preloadData = async () => {
     });
 
     await Promise.all(commentPromises);
-    console.log("✅ Data preloaded successfully!");
+    console.log("Data preloaded successfully!");
   } catch (err) {
-    console.error("❌ Error preloading data:", err.message);
+    console.error(" Error preloading data:", err.message);
   }
 };
 
@@ -120,6 +120,6 @@ app.get("/posts", async (req, res) => {
 
 preloadData().then(() => {
   app.listen(PORT, () => {
-    console.log(`🚀 Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
   });
 });
